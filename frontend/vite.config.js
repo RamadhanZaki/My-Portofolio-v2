@@ -1,5 +1,12 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+// Dapatkan __dirname alternatif
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export default defineConfig({
   plugins: [vue()],
@@ -8,7 +15,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/src'
+      '@': path.resolve(__dirname, './src')
     }
   }
 })

@@ -24,10 +24,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="w-full bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 animate-fade-in transition-colors duration-300">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-gray-800 dark:text-white hidden md:block">Ramadhan Zaki</div>
-      <ul class="flex space-x-6 items-center">
+  <header
+    class="w-full overflow-x-hidden bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 animate-fade-in transition-colors duration-300"
+  >
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <!-- Hidden di mobile -->
+      <div
+        class="text-2xl font-bold text-gray-800 dark:text-white hidden md:block"
+      >
+        Ramadhan Zaki
+      </div>
+
+      <ul class="flex flex-wrap items-center space-x-4 sm:space-x-6">
         <li>
           <a
             href="#profil"
@@ -59,6 +67,7 @@ onMounted(() => {
           >Contact</a>
         </li>
         <li>
+          <!-- Tombol Toggle Dark Mode -->
           <button
             @click="toggleDarkMode"
             class="ml-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300"

@@ -17,10 +17,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/dist/index.html"
+      "dest": "/index.html"
     }
   ],
-  "static": {
-    "distDir": "frontend/dist"
-  }
+  "outputDirectory": "frontend/dist"
 }

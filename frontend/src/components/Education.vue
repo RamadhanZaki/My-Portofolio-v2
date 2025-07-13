@@ -53,7 +53,7 @@ onMounted(async () => {
           </div>
           <div v-else class="w-full flex">
             <div class="w-1/2 flex justify-end">
-              <div class="w-4 h-4 bg-blue-600 rounded-full z-10"></div>
+              <div class="w-4 h-4 bg-blue-100 rounded-full z-10"></div>
             </div>
             <div class="w-1/2 pl-8 flex justify-start">
               <div

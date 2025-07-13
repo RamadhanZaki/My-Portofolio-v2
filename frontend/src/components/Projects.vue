@@ -18,7 +18,7 @@ onMounted(async () => {
 <template>
   <section id="proyek" class="py-20 bg-white dark:bg-gray-900">
     <div class="container mx-auto px-6">
-      <SectionTitle title="Proyek Unggulan" />
+      <SectionTitle title="Project Unggulan" />
       <div class="grid md:grid-cols-2 gap-12">
         <div
           v-for="project in projects"

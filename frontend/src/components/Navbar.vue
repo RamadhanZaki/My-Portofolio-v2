@@ -26,7 +26,7 @@ onMounted(() => {
 <template>
   <header class="w-full bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 animate-fade-in transition-colors duration-300">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-gray-800 dark:text-white">Ramadhan Zaki</div>
+      <div class="text-2xl font-bold text-gray-800 dark:text-white hidden md:block">Ramadhan Zaki</div>
       <ul class="flex space-x-6 items-center">
         <li>
           <a

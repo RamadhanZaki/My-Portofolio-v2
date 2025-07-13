@@ -1,4 +1,4 @@
-<!--- Trigger Vercel redeploy --->
+<!--- Trigger Vercel redeploy ---->
 
 # frontend
 

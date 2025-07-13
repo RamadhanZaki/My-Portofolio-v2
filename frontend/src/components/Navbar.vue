@@ -1,50 +1,64 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const isDark = ref(false)
+
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value
+  const html = document.documentElement
+  if (isDark.value) {
+    html.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    html.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  }
+}
+
+onMounted(() => {
+  if (localStorage.getItem('theme') === 'dark') {
+    isDark.value = true
+    document.documentElement.classList.add('dark')
+  }
+})
+</script>
+
 <template>
-  <header class="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 animate-fade-in">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+  <header class="w-full bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 animate-fade-in transition-colors duration-300">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-2xl font-bold text-gray-800 dark:text-white">Ramadhan Zaki</div>
       <ul class="flex space-x-6 items-center">
         <li>
           <a
             href="#profil"
             class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transform hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Profile
-          </a>
+          >Profile</a>
         </li>
         <li>
           <a
             href="#pendidikan"
             class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transform hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Education
-          </a>
+          >Education</a>
         </li>
         <li>
           <a
             href="#skill"
             class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transform hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Skills
-          </a>
+          >Skills</a>
         </li>
         <li>
           <a
             href="#proyek"
             class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transform hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Projects
-          </a>
+          >Projects</a>
         </li>
         <li>
           <a
             href="#kontak"
             class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transform hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Contact
-          </a>
+          >Contact</a>
         </li>
         <li>
-          <!-- Dark mode toggle -->
           <button
             @click="toggleDarkMode"
             class="ml-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300"
@@ -81,28 +95,3 @@
     </nav>
   </header>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const isDark = ref(false)
-
-const toggleDarkMode = () => {
-  isDark.value = !isDark.value
-  const html = document.documentElement
-  if (isDark.value) {
-    html.classList.add('dark')
-    localStorage.setItem('theme', 'dark')
-  } else {
-    html.classList.remove('dark')
-    localStorage.setItem('theme', 'light')
-  }
-}
-
-onMounted(() => {
-  if (localStorage.getItem('theme') === 'dark') {
-    isDark.value = true
-    document.documentElement.classList.add('dark')
-  }
-})
-</script>

@@ -1,3 +1,24 @@
+
+<script setup>
+import axios from 'axios'
+import { ref, onMounted } from 'vue'
+import SectionTitle from './SectionTitle.vue'
+
+const educationHistory = ref([])
+
+onMounted(async () => {
+  try {
+    const response = await axios.get('/api/education')
+    educationHistory.value = response.data
+  } catch (error) {
+    console.error(error)
+  }
+})
+
+
+</script>
+
+
 <template>
   <section id="pendidikan" class="py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans">
     <div class="container mx-auto px-6">
@@ -27,7 +48,7 @@
               </div>
             </div>
             <div class="w-1/2 flex justify-start">
-              <div class="w-4 h-4 bg-blue-600 rounded-full z 10"></div>
+              <div class="w-4 h-4 bg-blue-100 rounded-full z 10"></div>
             </div>
           </div>
           <div v-else class="w-full flex">
@@ -59,21 +80,3 @@
     </div>
   </section>
 </template>
-<script setup>
-import axios from 'axios'
-import { ref, onMounted } from 'vue'
-import SectionTitle from './SectionTitle.vue'
-
-const educationHistory = ref([])
-
-onMounted(async () => {
-  try {
-    const response = await axios.get('/api/education')
-    educationHistory.value = response.data
-  } catch (error) {
-    console.error(error)
-  }
-})
-
-
-</script>

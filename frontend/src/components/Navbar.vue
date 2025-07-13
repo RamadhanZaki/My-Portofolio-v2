@@ -106,7 +106,3 @@ onMounted(() => {
   }
 })
 </script>
-
-<style scoped>
-/* Optional: Customize transition for dark mode */
-</style>

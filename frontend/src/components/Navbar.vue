@@ -28,11 +28,15 @@ onMounted(() => {
     class="w-full overflow-x-hidden bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 animate-fade-in transition-colors duration-300"
   >
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-      <!-- Logo yang hanya tampil di layar medium ke atas -->
-      <div
-        class="text-2xl font-bold text-gray-800 dark:text-white hidden md:block"
-      >
+      <!-- Logo desktop -->
+      <div class="text-2xl font-bold text-gray-800 dark:text-white hidden md:block">
         Ramadhan Zaki
+      </div>
+
+      <!-- Logo mobile kosong (agar tidak tampil teks di mobile) -->
+      <div class="text-2xl font-bold text-gray-800 dark:text-white md:hidden">
+        <!-- Bisa dikosongkan atau isi dengan icon pendek -->
+        <!-- Contoh: <span>RZ</span> atau bisa juga kosong -->
       </div>
 
       <!-- Menu navigasi -->
